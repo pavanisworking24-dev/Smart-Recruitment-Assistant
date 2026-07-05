@@ -1,5 +1,4 @@
 # Smart-Recruitment-Assistant
-# Smart Recruitment Assistant
 
 An AI-powered recruitment support system that scores, ranks, and segments job candidates using Machine Learning — helping HR teams make faster, data-driven hiring decisions.
 
