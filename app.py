@@ -10,8 +10,8 @@ import os
 # ── Resolve file paths relative to app.py location ─────────────
 # Works both locally and on Streamlit Cloud regardless of working directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "model", "final_classification_model.joblib")
-DATA_PATH  = os.path.join(BASE_DIR, "data",  "recruitment_candidates_scored.csv")
+MODEL_PATH = os.path.join(BASE_DIR, "Model", "final_classification_model.joblib")
+DATA_PATH  = os.path.join(BASE_DIR, "Data",  "recruitment_candidates_scored.csv")
 
 # ── Page config ────────────────────────────────────────────────
 st.set_page_config(
