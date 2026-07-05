@@ -5,6 +5,13 @@ import joblib
 import shap
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import os
+
+# ── Resolve file paths relative to app.py location ─────────────
+# Works both locally and on Streamlit Cloud regardless of working directory
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model", "final_classification_model.joblib")
+DATA_PATH  = os.path.join(BASE_DIR, "data",  "recruitment_candidates_scored.csv")
 
 # ── Page config ────────────────────────────────────────────────
 st.set_page_config(
@@ -86,11 +93,11 @@ st.markdown("""
 # ── Load assets (cached) ───────────────────────────────────────
 @st.cache_resource
 def load_model():
-    return joblib.load("final_classification_model.joblib")
+    return joblib.load(MODEL_PATH)
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("recruitment_candidates_scored.csv")
+    df = pd.read_csv(DATA_PATH)
     # Compute candidate_tier on load (avoids dependency on clustering notebook's saved output)
     def get_tier_local(score):
         if score >= 50:   return "Excellent"
