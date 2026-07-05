@@ -155,9 +155,3 @@ Full reasoning for every decision is documented in `decision_log.md`.
 ## Technologies Used
 
 Python · XGBoost · scikit-learn · SHAP · Streamlit · pandas · NumPy · Matplotlib · Seaborn · Jupyter · joblib
-
----
-
-## Author
-
-Built as an advanced internship-level ML project demonstrating end-to-end data science: synthetic data design, EDA, classification modeling, ranking, unsupervised clustering, explainability, fairness auditing, and deployment.
