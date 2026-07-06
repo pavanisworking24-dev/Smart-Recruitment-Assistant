@@ -2,7 +2,7 @@
 
 An AI-powered recruitment support system that scores, ranks, and segments job candidates using Machine Learning — helping HR teams make faster, data-driven hiring decisions.
 
-Streamlit deployed link - https://smart-recruitment-assistant-dw9sbvnpeopxabux9tvkas.streamlit.app/
+Live Demo link - https://smart-recruitment-assistant-dw9sbvnpeopxabux9tvkas.streamlit.app/
 
 ---
 
