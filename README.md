@@ -84,7 +84,6 @@ smart_recruitment_assistant/
 - **Sensitive attributes** (`age`, `gender`) held out of training; used only in the fairness audit
 
 ### Classification Model
-<img width="889" height="490" alt="hiring_score" src="https://github.com/user-attachments/assets/1c8e15a5-0bdc-4289-a034-50a151fa3540" />
 
 <img width="690" height="590" alt="ROC_Curves_SRA" src="https://github.com/user-attachments/assets/49c8efbe-06fd-4f40-87f8-6c2a327ac6dd" />
 
