@@ -27,6 +27,8 @@ Manual candidate screening is time-consuming and inconsistent. This project buil
 | Estimated time saved | ~267 hours per hiring cycle* |
 
 *Based on a documented assumption of 5 minutes per manual application review. See `06_business_impact_simulation.ipynb` for full methodology and sensitivity analysis.
+<img width="690" height="390" alt="effort" src="https://github.com/user-attachments/assets/1f82a7ac-3c38-4cb1-bedd-0ae33cd3c192" />
+
 
 ---
 
@@ -82,6 +84,11 @@ smart_recruitment_assistant/
 - **Sensitive attributes** (`age`, `gender`) held out of training; used only in the fairness audit
 
 ### Classification Model
+<img width="889" height="490" alt="hiring_score" src="https://github.com/user-attachments/assets/1c8e15a5-0bdc-4289-a034-50a151fa3540" />
+
+<img width="690" height="590" alt="ROC_Curves_SRA" src="https://github.com/user-attachments/assets/49c8efbe-06fd-4f40-87f8-6c2a327ac6dd" />
+
+
 | Model | CV ROC-AUC | Notes |
 |---|---|---|
 | Logistic Regression (baseline) | 0.782 ± 0.027 | Linear model, good baseline |
@@ -91,10 +98,19 @@ smart_recruitment_assistant/
 Final model: XGBoost with GridSearch hyperparameter tuning (`max_depth=3`, `learning_rate=0.1`, `n_estimators=100`) and Platt scaling calibration. Brier score improved from 0.195 (uncalibrated) to 0.172 (calibrated).
 
 ### Clustering
+
+<img width="758" height="590" alt="cluatering" src="https://github.com/user-attachments/assets/e3a0a240-d9de-4213-ab73-4d6ccf2fe0de" />
+
 KMeans (k=4) selected over Hierarchical and GMM based on silhouette score comparison. Cluster stability confirmed via Adjusted Rand Index (ARI ≥ 0.943 across 5 random seeds). Clusters labeled Excellent / Strong / Average / Needs Improvement based on centroid mean Hiring Score.
+
+<img width="889" height="490" alt="hiring_score" src="https://github.com/user-attachments/assets/20b34863-de0f-45ef-9da8-44d64d158c44" />
+
 
 ### SHAP Explainability
 Global and per-role SHAP analysis validates the role-conditional feature weighting design — Software Engineer predictions weight technical skill and GitHub profile most heavily; Sales Executive weights communication; Strategy Consultant weights education level. Full analysis in `05_clustering_shap_fairness.ipynb`.
+
+<img width="988" height="490" alt="feature_imp" src="https://github.com/user-attachments/assets/c7331d9c-949e-45fa-a7ad-8f84db3e1815" />
+
 
 ### Fairness Audit
 Disparate impact ratios by gender: Female 0.986, Male 1.000, Other 0.867 — all above the standard 80% rule threshold. No proxy bias detected via relocation preference or age correlation checks. Limitation: the dataset was generated with sensitive attributes as statistically independent draws; the audit demonstrates methodology, not a guarantee of real-world fairness.
