@@ -102,7 +102,8 @@ Final model: XGBoost with GridSearch hyperparameter tuning (`max_depth=3`, `lear
 
 KMeans (k=4) selected over Hierarchical and GMM based on silhouette score comparison. Cluster stability confirmed via Adjusted Rand Index (ARI ≥ 0.943 across 5 random seeds). Clusters labeled Excellent / Strong / Average / Needs Improvement based on centroid mean Hiring Score.
 
-<img width="889" height="490" alt="hiring_score" src="https://github.com/user-attachments/assets/20b34863-de0f-45ef-9da8-44d64d158c44" />
+<img width="790" height="490" alt="candidate_tier" src="https://github.com/user-attachments/assets/c42a8e07-5649-41e8-be96-845c32f7cad7" />
+
 
 
 ### SHAP Explainability
